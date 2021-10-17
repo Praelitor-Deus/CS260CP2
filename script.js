@@ -9,6 +9,7 @@ fetch(url)
     results += '<h1>Worldwide Statistics' + "</h1>";
 
     results+= '<h5> Total cases: ' + json.All.confirmed + '</h5>';
+  //  results+= '<h5> Total recovered: ' + json.All.recovered + '</h5>'; API Only returns 0
     results+= '<h5> Total deaths: ' + json.All.deaths + '</h5>';
     results+= '<h5> Up to date as of: ' + moment(json.All.updated).format('MMMM Do, YYYY hh:mm a') + '</h5>';
 
@@ -33,6 +34,7 @@ document.getElementById("covidSubmit").addEventListener("click", function(event)
         results += '<hr>';
         results += '<br> <h1>Covid-19 in ' + json.All.country + "</h1>";
         results += '<h5> Confirmed Cases: ' + json.All.confirmed + '</h5>';
+       // results += '<h5> Total Recovered: ' + json.All.recovered + '</h5>'; API Only returns 0
         results += '<h5> Confirmed Deaths: ' + json.All.deaths + '</h5>';
 
         let perCapita = (json.All.confirmed / json.All.population) * 100000;
@@ -58,23 +60,22 @@ document.getElementById("covidSubmit").addEventListener("click", function(event)
             result += '<br> <h2> Total Cases by Date: </h2>';
             let index = 0;
 
-            let date = "2020-02-01";
+            let date = "2020-11-01";
 
             console.log(json.All.country);
 
-            result += '<hr><pre><h5>Date: Feb. 1, 2020 \t Cases: ' + json.All.dates[[date]] + '</h5>';
-            result += '<hr><h5>Date: Mar. 1, 2020 \t Cases: ' + json.All.dates["2020-03-01"] + '</h5>';
-            result += '<hr><h5>Date: Apr. 1, 2020 \t Cases: ' + json.All.dates["2020-04-01"] + '</h5>';
-            result += '<hr><h5>Date: May. 1, 2020 \t Cases: ' + json.All.dates["2020-05-01"] + '</h5>';
-            result += '<hr><h5>Date: June. 1, 2020 \t Cases: ' + json.All.dates["2020-06-01"] + '</h5>';
-            result += '<hr><h5>Date: July. 1, 2020 \t Cases: ' + json.All.dates["2020-07-01"] + '</h5>';
-            result += '<hr><h5>Date: Aug. 1, 2020 \t Cases: ' + json.All.dates["2020-08-01"] + '</h5>';
-            result += '<hr><h5>Date: Sep. 1, 2020 \t Cases: ' + json.All.dates["2020-09-01"] + '</h5>';
-            result += '<hr><h5>Date: Oct. 1, 2020 \t Cases: ' + json.All.dates["2020-10-01"] + '</h5>';
             result += '<hr><h5>Date: Nov. 1, 2020 \t Cases: ' + json.All.dates["2020-11-01"] + '</h5>';
             result += '<hr><h5>Date: Dec. 1, 2020 \t Cases: ' + json.All.dates["2020-12-01"] + '</h5>';
             result += '<hr><h5>Date: Jan. 1, 2021 \t Cases: ' + json.All.dates["2021-01-01"] + '</h5>';
-            result += '<hr><h5>Date: Feb. 1, 2021 \t Cases: ' + json.All.dates["2021-02-01"] + '</h5></pre><hr>';
+            result += '<hr><h5>Date: Feb. 1, 2021 \t Cases: ' + json.All.dates["2021-02-01"] + '</h5>';
+            result += '<hr><h5>Date: Mar. 1, 2021 \t Cases: ' + json.All.dates["2021-03-01"] + '</h5>';
+            result += '<hr><h5>Date: Apr. 1, 2021 \t Cases: ' + json.All.dates["2021-04-01"] + '</h5>';
+            result += '<hr><h5>Date: May. 1, 2021 \t Cases: ' + json.All.dates["2021-05-01"] + '</h5>';
+            result += '<hr><h5>Date: June. 1, 2021 \t Cases: ' + json.All.dates["2021-06-01"] + '</h5>';
+            result += '<hr><h5>Date: July. 1, 2021 \t Cases: ' + json.All.dates["2021-07-01"] + '</h5>';
+            result += '<hr><h5>Date: Aug. 1, 2021 \t Cases: ' + json.All.dates["2021-08-01"] + '</h5>';
+            result += '<hr><h5>Date: Sep. 1, 2021 \t Cases: ' + json.All.dates["2021-09-01"] + '</h5>';
+            result += '<hr><h5>Date: Oct. 1, 2021 \t Cases: ' + json.All.dates["2021-10-01"] + '</h5></pre><hr>';
 
             document.getElementById("Historical-Data").innerHTML = result;
         });

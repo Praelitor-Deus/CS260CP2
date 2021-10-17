@@ -8,6 +8,7 @@ fetch(url)
     let results = "";
     results += '<h1>' + "United States Statistics </h1>";
     results += '<h5> Confirmed Cases: ' + json.All.confirmed + '</h5>';
+   // results += '<h5> Total Recovered: ' + json.All.recovered + '</h5>'; API Only returns 0
     results += '<h5> Confirmed Deaths: ' + json.All.deaths + '</h5>';
 
     let perCapita = (json.All.confirmed / json.All.population) * 100000;
@@ -36,6 +37,7 @@ document.getElementById("USSubmit").addEventListener("click", function(event) {
         results += '<hr><br> <h1>Covid-19 in ' + value + "</h1>";
         console.log(json[value]);
         results += '<h5> Confirmed Cases: ' + json[value].confirmed + '</h5>';
+       // results += '<h5> Total Recovered: ' + json[value].recovered + '</h5>'; API Only returns 0
         results += '<h5> Confirmed Deaths: ' + json[value].deaths + '</h5>';
         results += '<h5> Long: ' + json[value].long + ' Lat: ' + json[value].lat;
 
