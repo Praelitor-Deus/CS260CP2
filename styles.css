@@ -1,0 +1,122 @@
+/*bootstrap menu */
+nav.bg-light {
+    background-color: #3d499a !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #42424f !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+body.background {
+    background-color: #42424f;
+}
+Body {
+    background-color: #42424f;
+
+}
+
+h1.background { /*changes the header color inside of the picture*/
+    color: #3d499a;
+}
+
+.footer {
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    background-color: #3d499a;
+    color: white;
+    text-align: center;
+    position: fixed;
+}
+
+a.footer { /*footer text color*/
+    color: #ffffff;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #b7b7b7;
+}
+
+.myMargin {
+    margin-left: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.full {
+    width: 100%;
+}
+
+.picture { /*Used to create the picture at the top. It also changes the text color */
+    color: black;
+    grid-area: picture;
+    min-height: 400px;
+    background: white url(covid-map.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.picture-usa { /*Used to create the picture at the top. It also changes the text color */
+    color: black;
+    grid-area: picture;
+    min-height: 400px;
+    width: 100%;
+    background: white url(us-flag.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+
+body {
+    font-family: Arial, serif;
+    font size: 20px;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+span {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    font-size: 15px;
+}
+
+#world-info {
+    padding: 30px;
+}
+
+#US-info {
+    padding: 30px;
+}
+.buffer {
+    height: 100px;
+}
+#country-results {
+    font-size: 40px;
+}
